@@ -1,0 +1,29 @@
+﻿<Window x:Class="pr6WPF.Owner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr6WPF"
+        mc:Ignorable="d"
+        Title="Owner" Height="450" Width="800" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Text="Пользователи:" Grid.Row="0" FontFamily="Agency FB" FontSize="16" TextAlignment="Center" />
+        <ListBox x:Name="ListMesseng" d:ItemsSource="{d:SampleData ItemCount=5}"   Grid.ColumnSpan="3" Margin="5,10,10,10" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="ChekName" Content="Посмотреть логи чата" FontSize="20" Grid.ColumnSpan="4" Click="ChekName_Click" />
+        <Button Grid.Column="1" Content="Выйти" Grid.Row="2" Click="Button_Click" />
+        <Button x:Name="ButtonMesseng" Grid.Column="3" Content="Отправить"  Grid.Row="2" Click="ButtonMesseng_Click"/>
+        <TextBox x:Name="Messeng" Grid.Column="2"  Grid.Row="2" TextWrapping="Wrap" Text="TextBox"/>
+        <ListBox x:Name="Gues" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+    </Grid>
+</Window>

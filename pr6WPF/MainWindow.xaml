@@ -1,0 +1,28 @@
+﻿<Window x:Class="pr6WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr6WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="74.054"/>
+            <RowDefinition Height="79*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Login" Margin="200,12,535,10" Grid.Row="1"/>
+        <TextBlock VerticalAlignment="Top" Height="78" FontSize="20" TextAlignment="Center" Margin="0,-1,0,0"><Run Language="ru-ru"/><LineBreak/><Run Language="ru-ru" Text="Вконтакте 2.1"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+        <TextBox x:Name="UserName" Margin="200,6,200,10" Grid.Row="2" />
+        <Button x:Name="Creat" Content="Создать свой чат"  Grid.Row="6" FontSize="20" Click="Creat_Click" Margin="200,12,424,27"/>
+        <Button x:Name="Conect" Content="Присоедениться к чату" Grid.Row="6" FontSize="20" Click="Conect_Click" Margin="0,12,200,27" HorizontalAlignment="Right" Width="219"/>
+        <TextBox x:Name="IP"  Grid.Row="4" TextWrapping="Wrap" Text="" Margin="200,6,200,25" RenderTransformOrigin="0.503,1.248" />
+        <TextBlock Text="Ip-address" Margin="200,0,535,4" Grid.Row="3"/>
+
+    </Grid>
+</Window>
